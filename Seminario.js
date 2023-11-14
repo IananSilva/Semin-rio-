@@ -11,9 +11,18 @@ class Pessoa{
         } 
     }
 
+ //get é usado para enviar dados de um formulário no caso para a class 
+ //pode ser tambem implementado para obter dados de alguma forma específica
+
     get registro(){
         return this._registro
     }
+
+ //Set é uma estrutura de dados que representa uma coleção de valores únicos
+ //o que significa que cada valor pode aparecer apenas uma vez
+ //o set tambem pode armazenar valores exclusivos e fornecer métodos
+ // para manipular esses valores de forma eficiente
+
     set registro (x){
         if (typeof x == "number"){
             this._registro = x
@@ -21,13 +30,19 @@ class Pessoa{
     }
 }
 
-
+ //Aqui eu estou usando a herança em JavaScript, a herança é um conceito que permite a um objeto 
+ //herdar propriedades e métodos de outro objeto. Isso é feito por meio de uma maneira que
+ //consegue estabelecer relações entre objetos.
 class Aluno extends Pessoa{
     constructor (nome, idade, materia, id){
         super (nome, idade, materia)
         this.id = id
     }
 }
+
+//let uma palavra-chave em JavaScript utilizada para demonstrar variáveis com ela é possivel introduzir 
+//características específicas lembrando que se for usar algo escrito temos que usar as ASPAS (" ")
+//que é uma forma de declarar variáveis ou informações em JavaScript.
 
 let p1 = new Aluno ("Andrade", 13, "profissionalizante", 1843623882)
 let p2 = new Aluno ("Luiz", 17, "informatica", 8367382921)
